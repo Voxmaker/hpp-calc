@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPP Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HPP Calculator</h1>
+            <p>Step 1: Tambahkan Bahan Baku</p>
+        </div>
+        
+        <div class="section">
+            <div class="input-group">
+                <label for="bahan">Nama Bahan:</label>
+                <input type="text" id="bahan" placeholder="Misal: Susu UHT">
+            </div>
+            <div class="input-group">
+                <label for="biaya">Biaya (Rp):</label>
+                <input type="number" id="biaya" placeholder="Misal: 20000">
+            </div>
+            <div class="input-group">
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" placeholder="Misal: 1000">
+                <select id="satuan">
+                    <option value="ml">ml</option>
+                    <option value="gram">gram</option>
+                    <option value="pieces">pieces</option>
+                </select>
+            </div>
+            <button id="addBahan">Tambah Bahan</button>
+        </div>
+
+        <div class="section">
+            <h2>Bahan Baku Ditambahkan</h2>
+            <div id="bahanList"></div>
+        </div>
+
+        <div class="section">
+            <p>Step 2: Masukkan Resep</p>
+            <div class="input-group">
+                <label for="produk">Nama Produk:</label>
+                <input type="text" id="produk" placeholder="Misal: Kopi Susu">
+            </div>
+            <div id="resepContainer">
+                <div class="input-group resep-group">
+                    <label for="resepBahan">Nama Bahan:</label>
+                    <input type="text" class="resepBahan" placeholder="Misal: Kopi">
+                    <label for="resepJumlah">Jumlah:</label>
+                    <input type="number" class="resepJumlah" placeholder="Misal: 10">
+                    <select class="resepSatuan">
+                        <option value="ml">ml</option>
+                        <option value="gram">gram</option>
+                        <option value="pieces">pieces</option>
+                    </select>
+                </div>
+            </div>
+            <button id="addResep">Tambah Bahan Resep</button>
+            <button id="calculate">Hitung HPP</button>
+        </div>
+
+        <div class="section">
+            <h2>Hasil Perhitungan</h2>
+            <div id="hasil"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
